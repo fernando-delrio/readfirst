@@ -15,6 +15,9 @@ The style has been applied and tested by rewriting whole frontends, backends and
 | **Skill `clean-ai-traces`** | Removes filler comments, emojis, banners, signatures and empty docstrings without touching the code, with a script that finds them (a folder or single files) | When asked to clean comments or "remove what smells like AI"; before showing code to a client |
 | **Skill `project-structure`** | Frontend and backend folders, `docs/` organization (plan, devlog, index), branches and commits | When starting a project or deciding where something goes |
 | **Skill `init-project`** | Copies the templates for the stack, installs lint and format, and creates a minimal `AGENTS.md` and `CLAUDE.md` | By hand only: `/readfirst:init-project` |
+| **Skill `choose-model`** | Studies the task and picks the model and effort; delegates to a subagent with that model when it is not the session's | When starting a non-trivial task, or with `/readfirst:choose-model` |
+| **Skill `delegate-and-review`** | Another agent writes the code; Claude prepares the brief and reviews the diff without trusting the summary | When the user wants a different agent to implement |
+| **Skill `critical-advisor`** | Honest advice without flattery: questions assumptions, labels confidence, disagrees in a structured way | By hand: `/readfirst:critical-advisor` |
 | **Agent `conventions-reviewer`** | Reviews only the session's changes (diff and new files) against the rules: a short list of violations with `file:line` and the new exceptions for you to approve. It does not edit | After writing or changing code |
 | **Stop hook** (`hooks/`, **disabled**) | When a turn ends with code changes, runs the project's formatter and linter on the changed files (or a light checker if there are none) and returns whatever fails so it gets fixed | See "Enable the stop hook" |
 | **Agent `craft-reviewer`** | Reviews general quality (Ousterhout, McConnell, SOLID, DRY/KISS/YAGNI…) | To find out whether something is well written |
@@ -141,7 +144,10 @@ skills/
 ├── refactor/           SKILL.md
 ├── clean-ai-traces/    SKILL.md + find_ai_traces.py
 ├── project-structure/  SKILL.md
-└── init-project/       SKILL.md
+├── init-project/       SKILL.md
+├── choose-model/       SKILL.md
+├── delegate-and-review/ SKILL.md
+└── critical-advisor/   SKILL.md
 agents/                 the four reviewer agents
 hooks/                  stop hook (disabled): check-on-stop.mjs and its modules (git, tools,
                         light checker, exceptions, run and attempt)

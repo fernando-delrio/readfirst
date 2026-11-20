@@ -17,6 +17,9 @@ El estilo se ha aplicado y probado reescribiendo frontends, backends y scripts e
 | **Skill `clean-ai-traces`** | Quita comentarios de relleno, emojis, banners, firmas y docstrings vacíos sin tocar el código, con un script que los busca (una carpeta o archivos sueltos) | Al pedir limpiar comentarios o «quitar lo que huele a IA»; antes de enseñar código a un cliente |
 | **Skill `project-structure`** | Carpetas del frontend y del backend, organización de `docs/` (plan, bitácora, índice), ramas y commits | Al empezar un proyecto o decidir dónde va algo |
 | **Skill `init-project`** | Copia las plantillas según el stack, instala lint y formato y crea `AGENTS.md` y `CLAUDE.md` mínimos | Solo a mano: `/readfirst:init-project` |
+| **Skill `choose-model`** | Estudia la tarea y elige modelo y esfuerzo; delega en un subagente con ese modelo cuando no es el de la sesión | Al empezar una tarea no trivial, o con `/readfirst:choose-model` |
+| **Skill `delegate-and-review`** | Otro agente escribe el código; Claude prepara el encargo y revisa el diff sin fiarse del resumen | Cuando se quiere que implemente un agente distinto |
+| **Skill `critical-advisor`** | Consejo honesto sin adulación: cuestiona suposiciones, etiqueta la confianza y discrepa de forma estructurada | A mano: `/readfirst:critical-advisor` |
 | **Agente `conventions-reviewer`** | Revisa solo los cambios de la sesión (diff y archivos nuevos) contra las reglas: lista corta de infracciones con `archivo:línea` y las excepciones nuevas para que las apruebes. No edita | Después de escribir o cambiar código |
 | **Hook de cierre** (`hooks/`, **desactivado**) | Al terminar un turno con cambios de código, pasa el formateador y el linter del proyecto a los archivos cambiados (o un comprobador ligero si no los hay) y devuelve lo que falle para que se corrija | Ver «Activar el hook de cierre» |
 | **Agente `craft-reviewer`** | Revisa la calidad general (Ousterhout, McConnell, SOLID, DRY/KISS/YAGNI…) | Para saber si algo está bien escrito |
@@ -143,7 +146,10 @@ skills/
 ├── refactor/           SKILL.md
 ├── clean-ai-traces/    SKILL.md + find_ai_traces.py
 ├── project-structure/  SKILL.md
-└── init-project/       SKILL.md
+├── init-project/       SKILL.md
+├── choose-model/       SKILL.md
+├── delegate-and-review/ SKILL.md
+└── critical-advisor/   SKILL.md
 agents/                 los cuatro agentes revisores
 hooks/                  hook de cierre (desactivado): check-on-stop.mjs y sus módulos (git, tools,
                         comprobador ligero, excepciones, run y attempt)
