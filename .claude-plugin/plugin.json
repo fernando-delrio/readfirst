@@ -1,6 +1,6 @@
 {
   "name": "readfirst",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Code that a person can read first: style rules with examples, a refactoring guide, AI-trace cleanup, project structure, project setup, reviewer agents and a stop hook (disabled by default).",
   "author": {
     "name": "Fernando del Río"
