@@ -1,13 +1,13 @@
 {
   "name": "readfirst",
-  "description": "Marketplace for the readfirst plugin: code style rules, refactoring and review for Claude Code.",
+  "description": "Marketplace for the readfirst plugin: code style rules, refactoring, review and working-method skills for Claude Code.",
   "owner": {
     "name": "Fernando del Río"
   },
   "plugins": [
     {
       "name": "readfirst",
-      "description": "Style rules, refactoring guide, project structure and reviewer agents, built around one idea: code is read by people first.",
+      "description": "Style rules, refactoring guide, project structure and reviewer agents, plus skills to choose the model by task, delegate and review, and get critical advice. Built around one idea: code is read by people first.",
       "source": "./",
       "category": "development"
     }

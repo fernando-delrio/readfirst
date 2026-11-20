@@ -1,11 +1,11 @@
 {
   "name": "readfirst",
   "version": "1.1.0",
-  "description": "Code that a person can read first: style rules with examples, a refactoring guide, AI-trace cleanup, project structure, project setup, reviewer agents and a stop hook (disabled by default).",
+  "description": "Code that a person can read first: style rules with examples, a refactoring guide, AI-trace cleanup, project structure, project setup, reviewer agents, model choice by task, delegation with review, a critical advisor and a stop hook (disabled by default).",
   "author": {
     "name": "Fernando del Río"
   },
   "license": "MIT",
-  "repository": "https://github.com/fernando-delrio/readfirst-code-style",
+  "repository": "https://github.com/fernando-delrio/readfirst",
   "keywords": ["style", "refactoring", "code-review", "readability", "react", "typescript", "python"]
 }

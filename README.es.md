@@ -75,7 +75,7 @@ Qué hace en cada turno que termina con archivos de código cambiados (según `g
 {
   "hooks": {
     "Stop": [
-      { "hooks": [{ "type": "command", "command": "node \"C:/dev/readfirst-code-style/hooks/check-on-stop.mjs\"", "timeout": 120 }] }
+      { "hooks": [{ "type": "command", "command": "node \"C:/dev/readfirst/hooks/check-on-stop.mjs\"", "timeout": 120 }] }
     ]
   }
 }
@@ -90,14 +90,14 @@ Si un proyecto tiene además su propio hook de cierre en `.claude/settings.json`
 Desde Claude Code:
 
 ```text
-/plugin marketplace add fernando-delrio/readfirst-code-style
+/plugin marketplace add fernando-delrio/readfirst
 /plugin install readfirst@readfirst
 ```
 
 O desde la terminal:
 
 ```bash
-claude plugin marketplace add fernando-delrio/readfirst-code-style
+claude plugin marketplace add fernando-delrio/readfirst
 claude plugin install readfirst@readfirst
 ```
 

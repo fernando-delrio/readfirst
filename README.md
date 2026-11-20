@@ -73,7 +73,7 @@ What it does on every turn that ends with changed code files (according to `git 
 {
   "hooks": {
     "Stop": [
-      { "hooks": [{ "type": "command", "command": "node \"C:/dev/readfirst-code-style/hooks/check-on-stop.mjs\"", "timeout": 120 }] }
+      { "hooks": [{ "type": "command", "command": "node \"C:/dev/readfirst/hooks/check-on-stop.mjs\"", "timeout": 120 }] }
     ]
   }
 }
@@ -88,14 +88,14 @@ If a project also has its own stop hook in `.claude/settings.json`, both run (Cl
 From Claude Code:
 
 ```text
-/plugin marketplace add fernando-delrio/readfirst-code-style
+/plugin marketplace add fernando-delrio/readfirst
 /plugin install readfirst@readfirst
 ```
 
 Or from the terminal:
 
 ```bash
-claude plugin marketplace add fernando-delrio/readfirst-code-style
+claude plugin marketplace add fernando-delrio/readfirst
 claude plugin install readfirst@readfirst
 ```
 
